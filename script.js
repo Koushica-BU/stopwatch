@@ -55,7 +55,7 @@ CreateStopWatches.prototype.startInterval = function () {
     clearInterval(self.timer);
     this.timer = setInterval(function () {
       self.increaseCounter();
-    }, 1);
+    }, 10);
 };
 
 CreateStopWatches.prototype.startTimer = function () {
@@ -101,6 +101,7 @@ CreateStopWatches.prototype.display = function () {
         ? "0" + this.milliseconds
         : this.milliseconds;
     this.timeDisplaydiv.innerText = `${h} : ${m} : ${s} : ${ms}`;
+//    `${String(this.hours).padStart(2, '0')}:${String(this.minutes).padStart(2, '0')}:${String(this.seconds).padStart(2, '0')}:${String(this.milliseconds).padStart(3, '0')}`;
 };
 
 let Watch1 = new CreateStopWatches();
